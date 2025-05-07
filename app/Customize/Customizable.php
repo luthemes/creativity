@@ -7,12 +7,13 @@
  *
  * @package   Creativity
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2024 Benjamin Lu
+ * @copyright 2023 Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/Creativity
  */
 
 namespace Creativity\Customize;
+
 use Creativity\Tools\Collection;
 use WP_Customize_Manager;
 
@@ -92,4 +93,28 @@ abstract class Customizable {
 	 * @return void
 	 */
 	public function registerPartials( WP_Customize_Manager $manager ) {}
+
+	/**
+	* Registers JSON for the customize controls script via `wp_localize_script()`.
+	* Objects added to the collection should implement the `JsonSerializable`
+	* interface.
+	*
+	* @since  1.0.0
+	* @access public
+	* @param  Collection  $json
+	* @return void
+	*/
+	public function controlsJson( Collection $json ) {}
+
+	/**
+	* Registers JSON for the customize preview script via `wp_localize_script()`.
+	* Objects added to the collection should implement the `JsonSerializable`
+	* interface.
+	*
+	* @since  1.0.0
+	* @access public
+	* @param  Collection  $json
+	* @return void
+	*/
+	public function previewJson( Collection $json ) {}
 }
