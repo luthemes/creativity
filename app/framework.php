@@ -4,7 +4,7 @@
  *
  * @package   Creativity
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2023. Benjamin Lu
+ * @copyright 2023 Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/creativity
  */
@@ -18,7 +18,7 @@
  * been booted.
  */
 
-$creativity = Backdrop\booted() ? Backdrop\app() : new Backdrop\Core\Application();
+$theme = new Backdrop\Core\Application();
 
 /** ------------------------------------------------------------------------------------------
  * Register default service providers with the application.
@@ -28,14 +28,9 @@ $creativity = Backdrop\booted() ? Backdrop\app() : new Backdrop\Core\Application
  * booting the application. These service providers form the foundation for the theme.
  */
 
-$creativity->provider( Backdrop\Fonts\Provider::class );
-$creativity->provider( Backdrop\Languages\Provider::class );
-$creativity->provider( Backdrop\Mix\Provider::class );
-$creativity->provider( Backdrop\Pagination\Provider::class );
-$creativity->provider( Backdrop\Template\Hierarchy\Provider::class );
-$creativity->provider( Backdrop\Template\Manager\Provider::class );
-$creativity->provider( Backdrop\Theme\Provider::class );
-$creativity->provider( Backdrop\View\Provider::class );
+$theme->provider( Backdrop\Customize\Provider::class);
+$theme->provider( Backdrop\Fonts\Provider::class );
+$theme->provider( Backdrop\Mix\Provider::class );
 
 /** ------------------------------------------------------------------------------------------
  * Register additional service providers for the theme.
@@ -45,10 +40,10 @@ $creativity->provider( Backdrop\View\Provider::class );
  * the application. These service providers offer supplementary features to the theme.
  */
 
- $creativity->provider( Creativity\Provider::class );
+ $theme->provider( Creativity\Provider::class );
 
- array_map( function( $component ) use ( $creativity ) {
-    $creativity->provider( "Creativity\\{$component}\\Provider" );
+ array_map( function( $component ) use ( $theme ) {
+    $theme->provider( "Creativity\\{$component}\\Provider" );
 }, [
     'CleanCP',
     'Customize',
@@ -64,7 +59,7 @@ $creativity->provider( Backdrop\View\Provider::class );
  * application instance as a parameter.
  */
 
-do_action( 'creativity/bootstrap', $creativity );
+do_action( 'creativity/bootstrap', $theme );
 
 /** ------------------------------------------------------------------------------------------
  * Boot the application.
@@ -74,4 +69,4 @@ do_action( 'creativity/bootstrap', $creativity );
  * application. Congratulations on a job well done!
  */
 
-$creativity->boot();
+$theme->boot();
