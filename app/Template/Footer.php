@@ -6,14 +6,15 @@
  *
  * @package   Creativity
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2024 Benjamin Lu
+ * @copyright 2023 Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/creativity
  */
 
 namespace Creativity\Template;
-use Creativity\Tools\PoweredBy;
+
 use Creativity\Tools\Mod;
+use Creativity\Tools\PoweredBy;
 
 /**
  * Powered by class.
@@ -79,25 +80,5 @@ class Footer {
 			'strong'  => [ 'class' => true ],
 			'br'	  => [ 'class' => true ]
 		];
-	}
-
-	/**
-	 * Returns an array of active footer sidebar IDs.
-	 *
-	 * @since  2.1.0
-	 * @access public
-	 * @return array
-	 */
-	public static function activeSidebars() {
-		$active_sidebars = [];
-
-		foreach ( range( 1, 4 ) as $id ) {
-
-			if ( is_active_sidebar( "footer-{$id}" ) ) {
-				$active_sidebars[] = "footer-{$id}";
-			}
-		}
-
-		return $active_sidebars;
 	}
 }
