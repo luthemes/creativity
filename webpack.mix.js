@@ -54,8 +54,8 @@ mix.version();
  * @link https://laravel.com/docs/6.x/mix#working-with-stylesheets
  */
 mix.js( `${devPath}/js/app.js`, 'assets/js' )
-	.js( `${devPath}/js/navigation.js`, 'assets/js' )
-	.js( `${devPath}/js/customize-controls.js`, 'assets/js' );
+   .js( `${devPath}/js/customize-controls.js`, 'assets/js' )
+   .js( `${devPath}/js/customize-preview.js`, 'assets/js' );
 
 
 /*
@@ -68,4 +68,5 @@ mix.js( `${devPath}/js/app.js`, 'assets/js' )
 
 // Compile SASS/CSS.
 mix.sass( `${devPath}/scss/screen.scss`, 'assets/css' )
-	.sass( `${devPath}/scss/customize-controls.scss`, 'assets/css' );
+   .sass( `${devPath}/scss/customize-controls.scss`, 'assets/css' )
+   .sass( `${devPath}/scss/customize-preview.scss`, 'assets/css' );
