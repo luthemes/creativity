@@ -45,7 +45,7 @@ class Customize extends Customizable {
 	public function registerSections( WP_Customize_Manager $manager ) {
 
 		$manager->add_section( 'theme_content_feature_image', [
-			'title' => esc_html__( 'Feature Image', 'generosity' ),
+			'title' => esc_html__( 'Feature Image', 'creativity' ),
 			'panel' => 'theme_content'
 		] );
 	}
@@ -80,7 +80,7 @@ class Customize extends Customizable {
 
         // Add a control for the feature image size.
         $manager->add_control( 'theme_content_feature_image', array(
-            'label'    => __( 'Feature Image Size', 'generosity' ),
+            'label'    => __( 'Feature Image Size', 'creativity' ),
             'section'  => 'theme_content_feature_image',
             'settings' => 'theme_content_feature_image',
             'type'     => 'select',
