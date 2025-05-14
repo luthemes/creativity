@@ -6,7 +6,7 @@
  *
  * @package   Creativity
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2023. Benjamin Lu
+ * @copyright 2023 Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/creativity
  */
@@ -14,7 +14,7 @@
 namespace Creativity;
 
 use function Backdrop\Fonts\enqueue;
-use function Backdrop\Theme\is_classicpress;
+use function Backdrop\is_classicpress;
 
 /**
  * Set up theme support.
@@ -37,9 +37,6 @@ add_action( 'after_setup_theme', function() {
 
 	// Automatically add feed links to `<head>`.
 	add_theme_support( 'automatic-feed-links' );
-
-	// Adds featured image support.
-	add_theme_support( 'post-thumbnails' );
 
 	if ( ! is_classicpress() ) {
 
@@ -181,11 +178,5 @@ add_filter( 'wp_nav_menu_objects', function( $items, $args ) {
 // Example usage
 add_action( 'wp_enqueue_scripts', function() {
 
-	array_map( function( $file ) {
-		enqueue( $file );
-	}, [
-		'fira-sans',
-		'merriweather',
-		'tangerine'
-	] );
+	enqueue( 'all' );
 } );
