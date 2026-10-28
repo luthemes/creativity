@@ -11,6 +11,7 @@
 - Composer dev dependencies (`wptrt/wpthemereview` is abandoned and blocked `composer install`).
 
 ### Fixed
+- Restored the `site-title`, `site-description` and core menu item classes the styles and navigation script rely on.
 - Show an admin notice instead of a fatal error when the Backdrop framework isn't installed.
 
 ## 0.2.8 - 11.14.2024
