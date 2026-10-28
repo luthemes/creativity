@@ -29,14 +29,14 @@ use Creativity\Settings\Options;
 add_action( 'wp_enqueue_scripts', function() {
 
 	// Rather than enqueue the main style.css stylesheet, we are going to enqueue screen.css.
-	wp_enqueue_style( 'creativity-screen', asset( 'assets/css/screen.css' ), null, null );
+	wp_enqueue_style( 'creativity-screen', asset( 'resources/scss/screen.scss' ), null, null );
 
 	// Enqueue theme scripts
-	wp_enqueue_script( 'creativity-app', asset( 'assets/js/app.js' ), [ 'jquery' ], null, true );
+	wp_enqueue_script( 'creativity-app', asset( 'resources/js/app.js' ), [ 'jquery' ], null, true );
 
 	// Enqueue Navigation.
-	wp_enqueue_script( 'generosity-navigation', asset( 'assets/js/navigation.js' ), null, null, true );
-	wp_localize_script( 'generosity-navigation', 'creativityScreenReaderText', [
+	wp_enqueue_script( 'creativity-navigation', asset( 'resources/js/navigation.js' ), null, null, true );
+	wp_localize_script( 'creativity-navigation', 'creativityScreenReaderText', [
 		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'creativity' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'creativity' ) . '</span>',
 	] );

@@ -4,6 +4,8 @@ public/assets
 vendor
 
 .DS_Store
-public/mix-manifest.json
 composer.lock
 package-lock.json
+
+# Theme export (npm run export)
+/creativity
