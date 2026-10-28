@@ -10,7 +10,7 @@
  */
 ?>
 <section id="content" class="site-content clear">
-	<div id="global-layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
+	<div id="global-layout" class="<?php echo esc_attr( get_theme_mod( 'theme_content_global_layout', 'left-sidebar' ) ); ?>">
 		<main id="main" class="content-area">
 			<?php $error->setup(); ?>
 			<article id="post-0" class="page">

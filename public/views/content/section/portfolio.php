@@ -29,7 +29,7 @@
 							?>
 							<li class="portfolio-item">
 								<a href="<?php echo esc_url( get_permalink() ); ?>">
-									<?php the_post_thumbnail( 'camaraderie-large-thumbnails' ); ?>
+									<?php the_post_thumbnail( 'creativity-medium' ); ?>
 								</a>
 								<div class="wp-caption">
 									<h2 class="wp-caption-text"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail_caption(); ?></a></h2>
