@@ -33,6 +33,6 @@ function creativity_framework_missing_message() {
 add_action( 'admin_notices', function() {
 
 	if ( current_user_can( 'switch_themes' ) ) {
-		printf( '<div class="notice notice-error"><p>%s</p></div>', creativity_framework_missing_message() ); // phpcs:ignore
+		printf( '<div class="notice notice-error"><p>%s</p></div>', wp_kses( creativity_framework_missing_message(), [ 'code' => [] ] ) );
 	}
 } );
