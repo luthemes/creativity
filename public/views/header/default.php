@@ -26,8 +26,8 @@ $error = new ErrorPage(); // phpcs:ignore
 	<header id="masthead" class="site-header">
 		<div class="branding-navigation">
 			<div class="site-branding">
-				<?php Backdrop\Site\display_title(); ?>
-				<?php Backdrop\Site\display_description(); ?>
+				<?php Backdrop\Site\display_title( [ 'class' => 'site-title', 'link_class' => 'site-title-link' ] ); ?>
+				<?php Backdrop\Site\display_description( [ 'class' => 'site-description' ] ); ?>
 			</div>
 			<?php Backdrop\View\display( 'menu', 'primary', [ 'location' => 'primary'] ); ?>
 		</div>
