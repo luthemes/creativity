@@ -14,7 +14,7 @@
 		<main id="main" class="content-area">
 			<?php if ( have_posts() ) : ?>
 				<?php while( have_posts() ) : the_post(); ?>
-					<?php Backdrop\View\display( 'content/entry/portfolio' ); ?>
+					<?php Backdrop\View\display( 'entry/portfolio' ); ?>
 				<?php endwhile; ?>
 				<?php comments_template(); ?>
 			<?php endif; ?>
