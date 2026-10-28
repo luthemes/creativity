@@ -19,7 +19,12 @@
  * is reused instead of creating a new one.
  */
 
-$theme = Backdrop\booted() ? Backdrop\app() : new Backdrop\Core\Application();
+// `Backdrop\booted()` was added on the framework's `develop` branch. If an older copy of the
+// framework is loaded first (for example, one bundled with a plugin), fall back to creating a
+// new application.
+$theme = function_exists( 'Backdrop\booted' ) && Backdrop\booted()
+	? Backdrop\app()
+	: new Backdrop\Core\Application();
 
 /** ------------------------------------------------------------------------------------------
  * Register default service providers with the application.
