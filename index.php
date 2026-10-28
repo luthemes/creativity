@@ -10,7 +10,7 @@
 // The Backdrop framework isn't installed (see `app/framework-missing.php`).
 if ( ! function_exists( 'Backdrop\\View\\display' ) ) {
 	wp_die(
-		current_user_can( 'switch_themes' ) ? creativity_framework_missing_message() : esc_html__( 'This site is temporarily unavailable.', 'creativity' ),
+		current_user_can( 'switch_themes' ) ? wp_kses( creativity_framework_missing_message(), [ 'code' => [] ] ) : esc_html__( 'This site is temporarily unavailable.', 'creativity' ),
 		esc_html__( 'Theme dependencies are missing', 'creativity' ),
 		[ 'response' => 503 ]
 	);
