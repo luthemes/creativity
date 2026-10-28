@@ -11,6 +11,8 @@
 - Composer dev dependencies (`wptrt/wpthemereview` is abandoned and blocked `composer install`).
 
 ### Fixed
+- Added the missing entry templates (`public/views/entry/`), so posts, pages and portfolio items show their content again.
+- Restored the core post classes (`post`, `page`, `portfolio`) the styles rely on.
 - Restored the `site-title`, `site-description` and core menu item classes the styles and navigation script rely on.
 - Show an admin notice instead of a fatal error when the Backdrop framework isn't installed.
 
