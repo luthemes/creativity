@@ -32,8 +32,8 @@
 									<?php the_post_thumbnail( 'creativity-large' ); ?>
 								</a>
 								<header class="entry-header">
-									<?php Backdrop\Theme\Entry\display_title(); ?>
-									<span class="entry-metadata"><?php Backdrop\Theme\Entry\display_date(); ?></span>
+									<?php Backdrop\Post\display_title(); ?>
+									<span class="entry-metadata"><?php Backdrop\Post\display_date(); ?></span>
 								</header>
 								<div class="entry-excerpt">
 									<?php the_excerpt(); ?>

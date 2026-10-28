@@ -96,7 +96,7 @@ add_action('wp_enqueue_scripts', function() {
  * @param  Backdrop\Tools\Collection  $data
  * @return Backdrop\Tools\Collection
  */
-add_filter( 'backdrop/template/view/content/data', function( $data ) {
+add_filter( 'backdrop/view/content/data', function( $data ) {
 
 	if ( is_404() ) {
 		$data->add( 'error', new ErrorPage() );

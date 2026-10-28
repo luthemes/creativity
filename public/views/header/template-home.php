@@ -24,8 +24,8 @@
 	<header id="masthead" class="site-header">
 		<div class="branding-navigation">
 			<div class="site-branding">
-				<?php Backdrop\Theme\Site\display_site_title(); ?>
-				<?php Backdrop\Theme\Site\display_site_description(); ?>
+				<?php Backdrop\Site\display_title(); ?>
+				<?php Backdrop\Site\display_description(); ?>
 			</div>
 			<?php Backdrop\View\display( 'menu', 'primary', [ 'location' => 'primary'] ); ?>
 		</div>
