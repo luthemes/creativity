@@ -1,5 +1,14 @@
 # Change Log
 
+## Unreleased
+### Changed
+- Updated to the `develop` branch of `backdrop-dev/framework`, and use the framework's Customize component.
+- Replaced Laravel Mix with Vite (`vite.config.js`), matching Inheritance. Assets are built to `public/assets` with a `manifest.json`.
+- The export script now includes the `config` folder.
+
+### Removed
+- `backdrop-dev/customize`, `webpack.mix.js` and `webpack.mix.export.js`.
+
 ## 0.2.8 - 11.14.2024
 ### Ehancement
 - Fixed Pagination and minor stuff
