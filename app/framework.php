@@ -13,12 +13,13 @@
  * Create a new application.
  * -------------------------------------------------------------------------------------------
  *
- * This code creates the one true instance of the Backdrop Core Application, which can be access
- * via the `Backdrop\app()`function or the `Backdrop\App` static class after the application has
- * been booted.
+ * This code creates the one true instance of the Backdrop Application, which can be accessed
+ * via the `Backdrop\app()` function as soon as it is created, and via the `Backdrop\App` static
+ * class after the application has been booted. If an application has already been booted, it
+ * is reused instead of creating a new one.
  */
 
-$theme = new Backdrop\Core\Application();
+$theme = Backdrop\booted() ? Backdrop\app() : new Backdrop\Core\Application();
 
 /** ------------------------------------------------------------------------------------------
  * Register default service providers with the application.
@@ -28,7 +29,6 @@ $theme = new Backdrop\Core\Application();
  * booting the application. These service providers form the foundation for the theme.
  */
 
-$theme->provider( Backdrop\Customize\Provider::class);
 $theme->provider( Backdrop\Fonts\Provider::class );
 $theme->provider( Backdrop\Mix\Provider::class );
 
@@ -38,16 +38,19 @@ $theme->provider( Backdrop\Mix\Provider::class );
  *
  * These are the additional providers that are crucial for the theme to operate before booting
  * the application. These service providers offer supplementary features to the theme.
+ *
+ * The `Customize` provider binds and boots the framework's `Backdrop\Customize\Component` with
+ * the theme's components, so `Backdrop\Customize\Provider` is not registered above.
  */
 
- $theme->provider( Creativity\Provider::class );
+$theme->provider( Creativity\Provider::class );
 
- array_map( function( $component ) use ( $theme ) {
-    $theme->provider( "Creativity\\{$component}\\Provider" );
+array_map( function( $component ) use ( $theme ) {
+	$theme->provider( "Creativity\\{$component}\\Provider" );
 }, [
-    'CleanCP',
-    'Customize',
-    'Settings'
+	'CleanCP',
+	'Customize',
+	'Settings',
 ] );
 
 /** ------------------------------------------------------------------------------------------

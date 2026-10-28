@@ -77,15 +77,15 @@ class Customize extends Customizable {
 		$displays = [
 			'home_display' => [
 				'default' 			=> false,
-				'sanitize_callback' => 'Backdrop\Customize\Helpers\Sanitize::checkbox',
+				'sanitize_callback' => 'Creativity\Customize\Sanitize::checkbox',
 			],
 			'portfolio_display' => [
 				'default'   		=> false,
-				'sanitize_callback' => 'Backdrop\Customize\Helpers\Sanitize::checkbox',
+				'sanitize_callback' => 'Creativity\Customize\Sanitize::checkbox',
 			],
 			'blog_display' => [
 				'default'           => false,
-				'sanitize_callback' => 'Backdrop\Customize\Helpers\Sanitize::checkbox',
+				'sanitize_callback' => 'Creativity\Customize\Sanitize::checkbox',
 			]
 		];
 

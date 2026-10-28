@@ -9,7 +9,7 @@
  * @link      https://luthemes.com/portfolio/creativity
  */
 
- use function Backdrop\Theme\is_plugin_or_class_active;
+ use function Backdrop\is_plugin_or_class_active;
 
 /**
  * Changes the theme template path to the `public/views` folder.

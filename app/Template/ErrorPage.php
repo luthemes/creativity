@@ -15,7 +15,7 @@ namespace Creativity\Template;
 
 use Creativity\Settings\Options;
 
-use function Backdrop\Theme\Entry\render_title;
+use function Backdrop\Post\render_title;
 
 /**
  * Error page class.

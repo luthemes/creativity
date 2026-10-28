@@ -47,7 +47,7 @@ class Customize extends Customizable {
 
         $manager->add_setting( 'theme_content_global_layout' , [
 			'default'           => 'left-sidebar',
-			'sanitize_callback' => 'Backdrop\Customize\Helpers\Sanitize::layouts',
+			'sanitize_callback' => 'Creativity\Customize\Sanitize::layouts',
         ] );
 	}
 

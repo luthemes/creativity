@@ -14,7 +14,7 @@
 namespace Creativity\Settings\Admin\Views;
 
 use Creativity\Settings\Options;
-use function Backdrop\Theme\is_classicpress;
+use function Backdrop\is_classicpress;
 
 /**
  * General settings view class.

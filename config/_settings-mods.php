@@ -16,7 +16,7 @@
  * @link      https://luthemes.com/portfolio/creativity
  */
 
-use function Backdrop\Theme\is_classicpress;
+use function Backdrop\is_classicpress;
 
 return [
 
@@ -42,12 +42,12 @@ return [
 	// Default footer credit text.
 	'theme_footer_custom_credit' => function() {
 		$year = gmdate('Y'); // Get the current year
-		$copyright = sprintf(__("&#169; %1\$s. %2\$s.", 'creativity'), $year, Backdrop\Theme\Site\render_home_link());
+		$copyright = sprintf(__("&#169; %1\$s. %2\$s.", 'creativity'), $year, Backdrop\Site\render_home_link());
 
 		if (is_classicpress()) {
-			$footer_text = sprintf(__("Powered by %1\$s and %2\$s.", 'creativity'), Backdrop\Theme\Site\render_cp_link(), Backdrop\Theme\Site\render_theme_link());
+			$footer_text = sprintf(__("Powered by %1\$s and %2\$s.", 'creativity'), Backdrop\Site\render_cp_link(), Backdrop\Site\render_theme_link());
 		} else {
-			$footer_text = sprintf(__("Powered by %1\$s and %2\$s.", 'creativity'), Backdrop\Theme\Site\render_wp_link(), Backdrop\Theme\Site\render_theme_link());
+			$footer_text = sprintf(__("Powered by %1\$s and %2\$s.", 'creativity'), Backdrop\Site\render_wp_link(), Backdrop\Site\render_theme_link());
 		}
 
 		return $copyright . ' <br /> ' . $footer_text;

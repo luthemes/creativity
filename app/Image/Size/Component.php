@@ -56,7 +56,7 @@ class Component implements Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() {
+	public function boot(): void {
 
 		// Run registration on the `init` hook.
 		add_action( 'after_setup_theme', [ $this, 'register' ], 5 );
@@ -78,7 +78,7 @@ class Component implements Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function register() {
+	public function register(): void {
 
 		add_theme_support( 'post-thumbnails' );
 

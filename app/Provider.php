@@ -35,7 +35,7 @@ class Provider extends ServiceProvider {
 	 * @access public
 	 * @return void
 	 */
-	public function register() {
+	public function register(): void {
 
 		// Bind a single instance of theme mod defaults.
 		$this->app->singleton( 'creativity/mods', function() {

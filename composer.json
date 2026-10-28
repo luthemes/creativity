@@ -19,9 +19,8 @@
 	},
 	"require": {
 		"php": ">=7.4",
-		"backdrop-dev/customize": "dev-develop",
 		"backdrop-dev/fonts": "dev-develop",
-		"backdrop-dev/framework": "1.0.x-dev",
+		"backdrop-dev/framework": "dev-develop",
 		"backdrop-dev/mix": "dev-develop"
 	},
 	"require-dev": {
