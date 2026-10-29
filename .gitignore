@@ -4,8 +4,8 @@ public/assets
 vendor
 
 .DS_Store
+# Composer writes this on install. The Backdrop packages are pinned in composer.json instead.
 composer.lock
-package-lock.json
 
 # Theme export (npm run export)
 /creativity
