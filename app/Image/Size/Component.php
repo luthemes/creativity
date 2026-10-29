@@ -62,7 +62,7 @@ class Component implements Bootable {
 		add_action( 'after_setup_theme', [ $this, 'register' ], 5 );
 
 		// Register default sizes.
-		add_action( 'generosity/image/size/register', [ $this, 'registerDefaultSizes' ] );
+		add_action( 'creativity/image/size/register', [ $this, 'registerDefaultSizes' ] );
 
 		// Filter the image size names in the editor.
 		add_filter( 'image_size_names_choose', [ $this, 'imageSizeNamesChoose' ] );
@@ -83,7 +83,7 @@ class Component implements Bootable {
 		add_theme_support( 'post-thumbnails' );
 
 		// Hook for registering custom image sizes.
-		do_action( 'generosity/image/size/register', $this->sizes );
+		do_action( 'creativity/image/size/register', $this->sizes );
 
 		// Registers image sizes with WordPress.  Note that the
 		// `post-thumbnail` size should be properly register with the

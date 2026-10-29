@@ -21,6 +21,13 @@
 	},
 	"devDependencies": {
 		"sass": "^1.93.3",
-		"vite": "^7.2.1"
+		"vite": "^7.3.7"
+	},
+	"overrides": {
+		"rollup": "^4.59.0",
+		"immutable": "^5.1.5"
+	},
+	"engines": {
+		"node": "^20.19.0 || >=22.12.0"
 	}
 }

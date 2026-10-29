@@ -28,9 +28,11 @@ Since Creativity is a parent theme, you'll want to create a child theme if you p
  * Author: Your Name
  * Author URI: https://link-to-your-site.com
  * Tags: Add, Whatever, Tags, You, Want
- * Template: creativity-child
+ * Template: creativity
  */
 </pre>
+
+`Template` must be the parent theme's folder name, `creativity`.
 
 From this point, you simply need to start adding your own styles. The parent theme styles will automatically be loaded for you.
 

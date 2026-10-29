@@ -154,25 +154,31 @@ add_action( 'after_setup_theme', function() {
 } );
 
 add_filter( 'wp_nav_menu_objects', function( $items, $args ) {
-    if ( $args->theme_location === 'social' ) {
-        foreach( $items as $item ) {
-            $icon_class = sanitize_title( $item->title );
-            $svg_icon_path = get_parent_theme_file_path( "/public/svg/$icon_class.svg" );
 
-            // Check if the SVG icon file exists, and if not, use a default icon.
-            if (file_exists($svg_icon_path)) {
-                $svg_icon = file_get_contents($svg_icon_path);
-                $item->title = $svg_icon;
-            } else {
-                // Replace with a default icon code (e.g., a font-awesome icon).
-                $default_icon = file_get_contents( get_parent_theme_file_path("/public/svg/default.svg") );
-                $item->title = $default_icon;
-            }
-        }
-    }
+	if ( 'social' !== $args->theme_location ) {
+		return $items;
+	}
 
-    return $items;
-}, 10, 2);
+	foreach ( $items as $item ) {
+
+		// Look for an icon named after the link's site (github.com -> github), then
+		// after the link title.
+		$host  = preg_replace( '/^www\./', '', (string) wp_parse_url( $item->url, PHP_URL_HOST ) );
+		$names = array_filter( [ strtok( $host, '.' ), sanitize_title( $item->title ) ] );
+
+		foreach ( $names as $name ) {
+			$icon = get_parent_theme_file_path( "public/svg/social-icons/{$name}.svg" );
+
+			if ( file_exists( $icon ) ) {
+				// Keep the title for screen readers; the icon is hidden from them.
+				$item->title = file_get_contents( $icon ) . '<span class="screen-reader-text">' . esc_html( $item->title ) . '</span>'; // phpcs:ignore
+				break;
+			}
+		}
+	}
+
+	return $items;
+}, 10, 2 );
 
 
 // Example usage

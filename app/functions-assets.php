@@ -35,16 +35,43 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script( 'creativity-app', asset( 'resources/js/app.js' ), [ 'jquery' ], null, true );
 
 	// Enqueue Navigation.
-	wp_enqueue_script( 'creativity-navigation', asset( 'resources/js/navigation.js' ), null, null, true );
+	wp_enqueue_script( 'creativity-navigation', asset( 'resources/js/navigation.js' ), [ 'jquery' ], null, true );
+
+	// Screen reader text for the menu toggles. `navigation.js` sets these as plain text.
 	wp_localize_script( 'creativity-navigation', 'creativityScreenReaderText', [
-		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'creativity' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'creativity' ) . '</span>',
+		'expandMain'    => __( 'Open the main menu', 'creativity' ),
+		'collapseMain'  => __( 'Close the main menu', 'creativity' ),
+		'expandChild'   => __( 'expand child menu', 'creativity' ),
+		'collapseChild' => __( 'collapse child menu', 'creativity' ),
 	] );
 
 	// Loads ClassicPress' comment-reply script where appropriate.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+} );
+
+/**
+ * Enqueue the customizer controls script, which hides controls whose active callback is
+ * false (see `resources/js/customize-controls.js`), and style the Global Layout control.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'customize_controls_enqueue_scripts', function() {
+
+	wp_enqueue_script( 'creativity-customize-controls', asset( 'resources/js/customize-controls.js' ), [ 'customize-controls' ], null, true );
+
+	wp_add_inline_style( 'customize-controls', '
+		li.customize-control.creativity-control-inactive { display: none !important; }
+		.customize-control-backdrop-radio-image .radio-image { display: inline-block; margin: 0 8px 8px 0; cursor: pointer; }
+		.customize-control-backdrop-radio-image input[type="radio"] { position: absolute; opacity: 0; }
+		.customize-control-backdrop-radio-image img { display: block; border: 4px solid transparent; box-sizing: border-box; }
+		.customize-control-backdrop-radio-image img:hover { border-color: #ccc; }
+		.customize-control-backdrop-radio-image input:checked ~ img { border-color: #00a0d2; }
+		.customize-control-backdrop-radio-image input:focus-visible ~ img { outline: 2px solid #2271b1; }
+	' );
 } );
 
 add_action('wp_enqueue_scripts', function() {
