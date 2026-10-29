@@ -51,6 +51,29 @@ add_action( 'wp_enqueue_scripts', function() {
 	}
 } );
 
+/**
+ * Enqueue the customizer controls script, which hides controls whose active callback is
+ * false (see `resources/js/customize-controls.js`), and style the Global Layout control.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'customize_controls_enqueue_scripts', function() {
+
+	wp_enqueue_script( 'creativity-customize-controls', asset( 'resources/js/customize-controls.js' ), [ 'customize-controls' ], null, true );
+
+	wp_add_inline_style( 'customize-controls', '
+		li.customize-control.creativity-control-inactive { display: none !important; }
+		.customize-control-backdrop-radio-image .radio-image { display: inline-block; margin: 0 8px 8px 0; cursor: pointer; }
+		.customize-control-backdrop-radio-image input[type="radio"] { position: absolute; opacity: 0; }
+		.customize-control-backdrop-radio-image img { display: block; border: 4px solid transparent; box-sizing: border-box; }
+		.customize-control-backdrop-radio-image img:hover { border-color: #ccc; }
+		.customize-control-backdrop-radio-image input:checked ~ img { border-color: #00a0d2; }
+		.customize-control-backdrop-radio-image input:focus-visible ~ img { outline: 2px solid #2271b1; }
+	' );
+} );
+
 add_action('wp_enqueue_scripts', function() {
 
 	$custom_image = esc_url( get_theme_mod( 'custom_image', get_theme_file_uri( '/public/images/header-image.jpg' ) ) );
