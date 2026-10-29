@@ -25,6 +25,15 @@ use function Backdrop\is_classicpress;
 class General extends View {
 
 	/**
+	 * The saved settings, without the defaults.
+	 *
+	 * @since  1.0.0
+	 * @access protected
+	 * @var    array|false
+	 */
+	protected $settings = [];
+
+	/**
 	 * Returns the view name/ID.
 	 *
 	 * @since  1.0.0
