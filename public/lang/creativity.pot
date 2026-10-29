@@ -1,0 +1,493 @@
+# Copyright (C) 2026 Benjamin Lu
+# This file is distributed under the GNU General Public License v2.0 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Creativity 0.3.0\n"
+"Report-Msgid-Bugs-To: https://github.com/luthemes/creativity/issues\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-29T05:28:05+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: creativity\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Creativity"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://luthemes.com/portfolio/creativity"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Creativity is a next-generation theme designed to work with ClassicPress, offering an ideal experience for showcasing your site's content."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Benjamin Lu"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://luthemes.com"
+msgstr ""
+
+#: app/Customize/Footer/Customize.php:23
+msgid "Credit"
+msgstr ""
+
+#: app/Customize/Footer/Customize.php:67
+msgid "Show random \"powered by\" credit text."
+msgstr ""
+
+#: app/Customize/Footer/Customize.php:74
+msgid "Custom Footer Text"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:23
+msgid "Home Section"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:39
+msgid "Header Section"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:45
+msgid "Portfolio Section"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:51
+msgid "Blog Section"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:97
+msgid "Our Mission Goes Here"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:102
+msgid "Your description goes here!"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:107
+#: app/functions-setup.php:118
+msgid "Portfolio"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:112
+msgid "Some of my recent works!"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:129
+msgid "Enable Header"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:135
+msgid "Enable Portfolio"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:141
+msgid "Enable Blog"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:153
+#: app/Customize/Home/Customize.php:168
+msgid "Title"
+msgstr ""
+
+#: app/Customize/Home/Customize.php:160
+#: app/Customize/Home/Customize.php:175
+msgid "Description"
+msgstr ""
+
+#: app/Customize/Layout/Customize.php:33
+msgid "Global Layout"
+msgstr ""
+
+#: app/Customize/Layout/Customize.php:69
+#: app/functions-extras.php:44
+msgid "Left Sidebar"
+msgstr ""
+
+#: app/Customize/Layout/Customize.php:73
+#: app/functions-extras.php:48
+msgid "Right Sidebar"
+msgstr ""
+
+#: app/Customize/Layout/Customize.php:79
+msgid "General Layout applies to all layouts that supports in this theme."
+msgstr ""
+
+#. Translators: 1 is the Composer command, 2 is the theme folder.
+#: app/framework-missing.php:27
+#, php-format
+msgid "The Creativity theme can't find the Backdrop framework. Run %1$s in the %2$s folder, or upload a copy of the theme that includes its vendor folder."
+msgstr ""
+
+#: app/functions-assets.php:42
+msgid "Open the main menu"
+msgstr ""
+
+#: app/functions-assets.php:43
+msgid "Close the main menu"
+msgstr ""
+
+#: app/functions-assets.php:44
+msgid "expand child menu"
+msgstr ""
+
+#: app/functions-assets.php:45
+msgid "collapse child menu"
+msgstr ""
+
+#: app/functions-assets.php:149
+#: app/Settings/Admin/Views/General.php:161
+msgid "404 Page"
+msgstr ""
+
+#: app/functions-extras.php:38
+msgid "Home"
+msgstr ""
+
+#: app/functions-extras.php:52
+msgid "Custom Sidebar"
+msgstr ""
+
+#: app/functions-setup.php:60
+msgid "Primary Navigation"
+msgstr ""
+
+#: app/functions-setup.php:61
+msgid "Social Navigation"
+msgstr ""
+
+#: app/functions-setup.php:110
+msgid "Primary"
+msgstr ""
+
+#: app/functions-setup.php:114
+msgid "Secondary"
+msgstr ""
+
+#: app/functions-setup.php:122
+msgid "Custom"
+msgstr ""
+
+#: app/functions-setup.php:151
+msgid "Header Image"
+msgstr ""
+
+#: app/functions-template.php:31
+msgctxt "meta separator"
+msgid "&middot;"
+msgstr ""
+
+#: app/Image/Customize.php:48
+msgid "Feature Image"
+msgstr ""
+
+#: app/Image/Customize.php:83
+msgid "Feature Image Size"
+msgstr ""
+
+#: app/Settings/Admin/OptionsPage.php:197
+msgid "Customize"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:56
+msgid "General"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:123
+msgid "Clean ClassicPress"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:123
+msgid "Clean WordPress"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:127
+msgid "Reading"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:168
+msgid "Emoji"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:173
+msgid "Toolbar"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:178
+msgid "Embeds"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:206
+msgid "Settings related to reading and display options for your site, including the 404 error page."
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:221
+msgid "Clean up unnecessary items on the front end of your site for speed improvements."
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:262
+msgid "Add New Page"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:271
+msgid "Select a page to display when users visit a 404 error on your site. Ensure the page is set to private so it does not appear on the front end."
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:288
+msgid "Disable Emoji Scripts"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:293
+msgid "All modern browsers support emoji natively. Disabling emoji scripts removes the JavaScript loaded on every page of your site for a small percentage of users on outdated browsers."
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:310
+msgid "Disable Toolbar"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:314
+msgid "Disables the toolbar on the front end of the site, which loads additional JavaScript and CSS on every page load."
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:327
+msgid "Disable ClassicPress Embeds"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:327
+msgid "Disable WordPress Embeds"
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:338
+msgid "Removes the JavaScript that allows other sites to embed your posts."
+msgstr ""
+
+#: app/Settings/Admin/Views/General.php:355
+msgid "Update Settings"
+msgstr ""
+
+#: app/Settings/Admin/Views/Plugins.php:48
+msgid "Plugins"
+msgstr ""
+
+#: app/Settings/Admin/Views/Plugins.php:155
+msgid "The following plugins are not required, but are highly recommended to enhance your website functionality:"
+msgstr ""
+
+#: app/Settings/Admin/Views/Plugins.php:171
+msgid "By "
+msgstr ""
+
+#: app/Settings/Admin/Views/Plugins.php:173
+msgid "Active Installations: "
+msgstr ""
+
+#: app/Settings/Admin/Views/Plugins.php:179
+#: app/Settings/Admin/Views/Plugins.php:197
+msgid "ClassicPress Directory Integration must be installed first."
+msgstr ""
+
+#: app/Settings/Admin/Views/Plugins.php:192
+msgid "Description not available."
+msgstr ""
+
+#: app/Settings/Provider.php:45
+msgid "Creativity Settings"
+msgstr ""
+
+#: app/Template/ErrorPage.php:117
+msgid "404 Not Found"
+msgstr ""
+
+#: app/Template/ErrorPage.php:136
+msgid "It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:35
+msgid "Powered by heart and soul."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:36
+msgid "Powered by crazy ideas and passion."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:37
+msgid "Powered by the thing that holds all things together in the universe."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:38
+msgid "Powered by love."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:39
+msgid "Powered by the vast and endless void."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:40
+msgid "Powered by the code of a maniac."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:41
+msgid "Powered by peace and understanding."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:42
+msgid "Powered by coffee."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:43
+msgid "Powered by sleepness nights."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:44
+msgid "Powered by the love of all things."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:45
+msgid "Powered by something greater than myself."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:46
+msgid "Powered by whispers from the future."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:47
+msgid "Powered by the fusion of technology and dreams."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:48
+msgid "Powered by the strength found in kindness."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:49
+msgid "Powered by the melodies of the unseen world."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:50
+msgid "Powered by the courage of the unheard voices."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:51
+msgid "Powered by the beauty of the human spirit."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:52
+msgid "Powered by the quest for eternal wisdom."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:53
+msgid "Powered by the energy of uncharted galaxies."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:54
+msgid "Powered by the magic hidden in plain sight."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:55
+msgid "Powered by the legacy of the ancients."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:56
+msgid "Powered by the dance between light and darkness."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:57
+msgid "Powered by the touch of the morning sun."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:58
+msgid "Powered by the secrets of the deep ocean."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:59
+msgid "Powered by the echoes of laughter and joy."
+msgstr ""
+
+#: app/Tools/PoweredBy.php:60
+msgid "Powered by the relentless pursuit of truth."
+msgstr ""
+
+#. Translators: 1 is the current year, 2 is a link to the site.
+#: config/_settings-mods.php:46
+#, php-format
+msgid "&#169; %1$s. %2$s."
+msgstr ""
+
+#. Translators: 1 is a link to ClassicPress or WordPress, 2 is a link to the theme.
+#: config/_settings-mods.php:50
+#: config/_settings-mods.php:53
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#: index.php:13
+msgid "This site is temporarily unavailable."
+msgstr ""
+
+#: index.php:14
+msgid "Theme dependencies are missing"
+msgstr ""
+
+#. Translators: %s is the parent comment link.
+#: public/views/comment/default.php:6
+#, php-format
+msgid "In reply to %s"
+msgstr ""
+
+#: public/views/comment/default.php:35
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: public/views/comments/default.php:14
+msgctxt "comments title"
+msgid "One Comment"
+msgstr ""
+
+#. Translators: 1 = counts.
+#: public/views/comments/default.php:17
+#, php-format
+msgctxt "comments title"
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: public/views/comments/default.php:34
+msgid "Older Comments"
+msgstr ""
+
+#: public/views/comments/default.php:35
+msgid "Newer Comments"
+msgstr ""
+
+#: public/views/content/section/blog.php:14
+#: public/views/header/default.php:53
+msgid "Blog"
+msgstr ""
+
+#: public/views/content/section/blog.php:15
+msgid "Latest News"
+msgstr ""
+
+#: public/views/header/default.php:23
+#: public/views/header/template-home.php:21
+msgid "Skip to content"
+msgstr ""
+
+#: public/views/header/default.php:43
+msgid "(Untitled)"
+msgstr ""
+
+#: public/views/menu/primary.php:5
+msgid "Menu"
+msgstr ""
