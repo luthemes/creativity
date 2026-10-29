@@ -35,10 +35,14 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script( 'creativity-app', asset( 'resources/js/app.js' ), [ 'jquery' ], null, true );
 
 	// Enqueue Navigation.
-	wp_enqueue_script( 'creativity-navigation', asset( 'resources/js/navigation.js' ), null, null, true );
+	wp_enqueue_script( 'creativity-navigation', asset( 'resources/js/navigation.js' ), [ 'jquery' ], null, true );
+
+	// Screen reader text for the menu toggles. `navigation.js` sets these as plain text.
 	wp_localize_script( 'creativity-navigation', 'creativityScreenReaderText', [
-		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'creativity' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'creativity' ) . '</span>',
+		'expandMain'    => __( 'Open the main menu', 'creativity' ),
+		'collapseMain'  => __( 'Close the main menu', 'creativity' ),
+		'expandChild'   => __( 'expand child menu', 'creativity' ),
+		'collapseChild' => __( 'collapse child menu', 'creativity' ),
 	] );
 
 	// Loads ClassicPress' comment-reply script where appropriate.
