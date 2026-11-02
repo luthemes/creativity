@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.1 - 11.02.2026
+### Added
+- The translation template, `public/lang/creativity.pot`, now includes the strings that come from the Backdrop framework, such as the pagination's Previous and Next, "Search results for: %s", "Archives" and the customizer's Theme: panels. The framework translates them through the theme's own text domain, so they are translated along with the rest of the theme; until now they were missing from the template, so they stayed in English.
+
 ## 0.3.0 - 10.28.2026
 ### Breaking
 - Renamed the image size hooks copied from Generosity: `generosity/image/size/register` is now `creativity/image/size/register`, and `generosity/image/size/{name}/label` is now `creativity/image/size/{name}/label`. Child themes using the old names need to update.
